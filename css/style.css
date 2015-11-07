@@ -62,6 +62,7 @@ html, body, #main-wrapper, .bg-overlay {
 
 a.std-button {
     text-decoration: none;
+    color: white;
 }
 
 a.std-button:visited {
