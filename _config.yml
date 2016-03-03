@@ -1,0 +1,15 @@
+# Site settings
+title: Project Lemon
+description: > # ignore newlines
+  Project Lemon is an open source project founded and driven by a group of interaction
+  design students at Umeå University. We share a passion for digital creation and graphical design. This passion is 
+  chanalized over on github. We really think you should check us out and feel fre to contribute and grow with us.
+#baseurl: "" # the subpath of your site, e.g. /blog
+#url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+gems:
+  - jekyll-paginate
+paginate: 4
+paginate_path: "/blog/page:num/"

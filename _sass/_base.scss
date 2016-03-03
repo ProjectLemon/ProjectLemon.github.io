@@ -1,0 +1,189 @@
+/**
+ * Reset some basic elements
+ */
+html, body, div, span, object, ifram, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, img, form, table, time, canvas, header,
+meny, nav, section, audio, video, dl, dd, ol, ul, figure {
+  border:0;
+  font-size:100%;
+  vertical-align:baseline;
+  margin:0;
+  padding:0
+}
+article, aside, details, figcaption, figure, footer, header,
+hgroup, menu, nav, section{
+  display:block
+}
+body {
+  line-height:1
+}
+table{
+  border-collapse:collapse;
+  border-spacing:0
+}
+
+
+
+/**
+ * Basic Styling
+ */
+html {
+  font-size: 62.5%; // makes 1.2rem correspond to 12pt
+}
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  background: url("/assets/images/bg.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.unactive-link {
+  opacity: .4;
+}
+
+/**
+ * Text
+ */
+p {
+  font-size: $font-size-text;
+  line-height: $line-height-base;
+}
+.title {
+  font-size: $font-size-title;
+  font-weight: $font-weight-medium;
+}
+
+
+/**
+ * Images
+ */
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/**
+ * Lists
+ */
+
+li {
+  list-style: none;
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+
+
+/**
+ * Links
+ */
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:visited {
+    color: darken($brand-color, 1%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
+  }
+}
+
+
+/**
+ * Code formatting
+ */
+pre,
+code {
+  font-size: $font-size-base;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 3px;
+  background: #1d1f21;
+  color: #c5c8c6
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/**
+ * Common Layouts
+ */
+.centered-content {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; 
+}
+
+/**
+ * Buttons
+ */
+.std-button {
+  background-color: #37474F;
+  border: 1px solid #37474F;
+  border-radius: 30px;
+  padding: .6em 4em;
+  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.4);
+  transition: box-shadow .3s, background-color .2s;
+  
+  &:hover {
+    box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.45);
+    background-color: #506671;
+    border-color: #506671;
+  }
+
+  &:active {
+    background-color: #728994;
+    border-color: #728994;
+  }
+}
+
+a.std-button {
+  text-decoration: none;
+  color: white;
+  
+  &:visited {
+    color: white;
+  }
+}
+
+/**
+ * Icons
+ */
+.icon {
+  height: 1em;
+  width: 1em;
+
+  > svg {
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    vertical-align: top;
+
+    path {
+      fill: white;
+    }
+  }
+}
+.icon-white > svg path {
+  fill: white;
+}

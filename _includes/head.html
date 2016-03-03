@@ -1,0 +1,49 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name=description content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+
+  
+  <!-- ## Favicons ## -->
+
+  <link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+  
+  <!-- Safari Mac -->
+  <link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+  <!-- Google TV -->
+  <link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+  <!-- To overrule the special 192x192 for Android Chrome -->
+  <link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+  <!-- Android Chrome -->
+  <link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+  <!-- Safari Mac Pinned Tab -->  
+  <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <!-- Windows Metro interface (Deprecated, replaced by browserconfig.xml) -->
+  <meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+  <!-- Declares icons for Metro interface -->
+  <meta name="msapplication-config" content="/browserconfig.xml">
+  <!-- Declares icons for Android Homescreen -->
+  <link rel="manifest" href="/favicons/manifest.json">
+
+  <!-- iOS Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+  
+  <!-- ## For bookmarking ## -->  
+  
+  <!-- Windows Color for Tile when bookmarked on Metro interface -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <!-- Android Color for Appbar when bookmarked on homescreen -->
+  <meta name="theme-color" content="#37474f">
+</head>

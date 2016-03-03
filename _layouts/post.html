@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<article class="blog-post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <h1 class="title" itemprop="name headline">{{ page.title }}</h1>
+  <time class="blog-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+  {% if page.author %}
+   {% if page.author-link %}
+      <span class="blog-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span>Written by <a href="{{ page.author-link }}" itemprop="name">{{ page.author }}</a></span>
+      </span>
+    {% else %}
+      <span class="blog-author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Written by {{ page.author }}</span>
+      </span>
+    {% endif %}
+  {% endif %}
+
+  <p class="post-text">{{ page.content }}</p>
+
+</article>

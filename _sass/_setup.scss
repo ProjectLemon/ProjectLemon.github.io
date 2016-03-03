@@ -1,0 +1,71 @@
+/**
+ * This file sets up scss related configurations, like variables
+ * and should be included in all generated css files.
+ * It does not actually produce any css code.
+ */
+
+@charset "utf-8";
+
+// Our variables
+$font-family-base: "Roboto", Helvetica, Arial, sans-serif;
+$font-size-base:   1.6rem;
+$font-size-large:  2.0rem;
+$font-size-small:  1.2rem;
+$font-size-text:   1.5rem;
+$font-size-title:  2.3rem;
+$font-weight-regular: 400;
+$font-weight-medium:  500;
+$line-height-base: 1.5;
+
+
+$text-color:       #4A4A4A;
+$background-color: #F3F3F3;
+$brand-color:      #DB802A;
+
+
+// Width of the content area
+$content-width:    600px;
+
+// Breakpoints
+$desktop:          700px;
+$phone:            480px;
+
+
+/**
+ * Mixins
+ */
+@mixin media-query($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+@mixin media-desktop() {
+  @media (min-width: $desktop+1) {
+    @content;
+  }
+}
+@mixin media-tablet() {
+  @media (min-width: $phone+1) and (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin media-mobile() {
+  @media (max-width: $phone) {
+    @content;
+  }
+}
+
+
+/**
+ * Super classes
+ */
+
+// Clearfix
+%clearfix {
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
