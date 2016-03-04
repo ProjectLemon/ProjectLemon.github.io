@@ -4,9 +4,21 @@
   
   <meta name=viewport content="width=device-width, initial-scale=1">
   <meta name=description content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  <style>
+    {% capture inline %}{% include code/inline.scss %}{% endcapture %}
+    {{ inline | scssify }}
+  </style>
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
-
+  {% if page.math == true %}
+  <script>
+  window.MathJax = {
+    asciimath2jax: {
+      delimiters: [['%%','%%']]
+    }
+  };
+  </script>
+  <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_HTMLorMML"></script>
+  {% endif %}
   
   <!-- ## Favicons ## -->
 

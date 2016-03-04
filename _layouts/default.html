@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html>
 
@@ -9,7 +13,7 @@
 
     <div class="page-content">
       <div class="wrapper">
-        {{ content }}
+        {{ content | replace:'$..','<script type="math/asciimath">' | replace:'..$','</script><noscript><em>Sorry, but math can&#39;t be shown without javascript turned on</em></noscript>' }}
       </div>
     </div>
 

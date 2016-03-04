@@ -1,5 +1,6 @@
 ---
 layout: default
+math: true
 ---
 
 <div class="blog-navigation">
@@ -35,7 +36,7 @@ layout: default
           {% endif %}
         {% endif %}
 
-        <p class="post-text">{{ post.content }}</p>
+        <p class="post-text">{{ post.content | replace:'%-','<div class="code">`' | replace:'-%','`</div>' }}</p>
       </div>
     </li>
   {% endfor %}

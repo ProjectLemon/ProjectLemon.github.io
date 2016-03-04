@@ -13,3 +13,10 @@ gems:
   - jekyll-paginate
 paginate: 4
 paginate_path: "/blog/page:num/"
+
+sass:
+  style: compressed
+
+compress_html:
+  comments: ["<!--", "-->"]
+  clippings: all
