@@ -13,12 +13,18 @@ layout: compress
 
     <div class="page-content">
       <div class="wrapper">
-        {{ content | replace:'$..','<script type="math/asciimath">' | replace:'..$','</script><noscript><em>Sorry, but math can&#39;t be shown without javascript turned on</em></noscript>' }}
+        <!-- The replacing stuff is used for math (mathjax) with a custom delimiters $.. ..$ -->
+        {% assign start_delimiter = '<script type="math/asciimath">' %}
+        {% assign end_delimiter = '</script><noscript><em>Sorry, but math can&#39;t be shown without javascript turned on</em></noscript>' %}
+        {{ content | replace:'$..',start_delimiter| replace:'..$',end_delimiter }}
       </div>
     </div>
 
     {% include footer.html %}
-
+    
+    {% if content contains '$..' %}
+      <script async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_HTMLorMML"></script>
+    {% endif %}
   </body>
 
 </html>

@@ -49,7 +49,7 @@ $phone:            480px;
     @content;
   }
 }
-@mixin media-mobile() {
+@mixin media-phone() {
   @media (max-width: $phone) {
     @content;
   }

@@ -7,8 +7,6 @@ categories: category1, category2 # Optional
 
 author: Fredrik # Optional but highly recommended
 author-link: http://fredrik-johansson.com # Optional
-
-math: true # If you use %%math%% (don't include if no math)
 ---
 
 # Big Title

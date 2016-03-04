@@ -1,6 +1,7 @@
 ---
 layout: default
-math: true
+redirect_from:
+  - /blog/page1/
 ---
 
 <div class="blog-navigation">
@@ -19,6 +20,7 @@ math: true
 
 <ul>
   {% for post in paginator.posts %}
+  
     <li>
       <div class="blog-post">
         <a class="title" href="{{ post.url }}">{{ post.title }}</a>
@@ -36,7 +38,7 @@ math: true
           {% endif %}
         {% endif %}
 
-        <p class="post-text">{{ post.content | replace:'%-','<div class="code">`' | replace:'-%','`</div>' }}</p>
+        <p class="post-text">{{ post.content }}</p>
       </div>
     </li>
   {% endfor %}
