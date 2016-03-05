@@ -32,6 +32,7 @@ body {
   font-family: $font-family-base;
   font-size: $font-size-base;
   background: url("/assets/images/bg.jpg") no-repeat center center fixed; 
+  background-color: #506671;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -55,10 +56,11 @@ p {
   margin-bottom: 1em;
 }
 .subtitle {
-  font-size: $font-size-large;
+  font-size: $font-size-base;
   font-weight: $font-weight-medium;
+  color: $text-color;
   display: block;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
 }
 .footnote {
   font-size: $font-size-small;
@@ -119,7 +121,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: lighten($brand-color, 4%);
     text-decoration: underline;
   }
 }
@@ -130,20 +132,20 @@ a {
  */
 pre,
 code {
-  font-size: $font-size-base;
+  font-size: $font-size-code;
   margin: 1em 0;
   padding: 1em;
-  border-radius: 3px;
-  background: #1d1f21;
-  color: #c5c8c6
+  border-radius: .3rem;
+  color: #c5c8c6;
+  border: .1rem solid #e3e3e3;
 }
 
 code {
-  padding: 1px 5px;
+  padding: .1rem .5rem;
 }
 
 pre {
-  padding: 8px 12px;
+  padding: .8rem 1.2rem;
   overflow-x: auto;
 
   > code {
@@ -163,12 +165,13 @@ pre {
   text-align: center; 
 }
 .big-list-content {
-  padding-top: 1em;
-  padding-bottom: 3em;
+  padding-top: .5em;
+  padding-bottom: 1.5em;
 }
 .medium-list-content {
-  padding-top: .8em;
-  padding-bottom: .8em;
+  font-size: $font-size-text;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 .left {
   float: left;
@@ -182,14 +185,14 @@ pre {
  */
 .std-button {
   background-color: #37474F;
-  border: 1px solid #37474F;
-  border-radius: 30px;
+  border: .1rem solid #37474F;
+  border-radius: 3rem;
   padding: .6em 4em;
-  box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.4);
+  box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,0.4);
   transition: box-shadow .3s, background-color .2s;
   
   &:hover {
-    box-shadow: 0px 6px 18px 0px rgba(0,0,0,0.45);
+    box-shadow: 0 .6rem 1.8rem 0 rgba(0,0,0,0.45);
     background-color: #506671;
     border-color: #506671;
   }
@@ -200,7 +203,7 @@ pre {
   }
 }
 .button-container {
-  margin: .6em 4em;
+  margin: .6em 0;
 }
 
 a.std-button {
@@ -240,10 +243,15 @@ a.std-button {
  */
 blockquote {
   color: $text-color;
-  border-left: 4px solid $text-color;
-  padding-left: 4px;
-  font-size: 18px;
-  letter-spacing: -1px;
+  border-left: .4rem solid $text-color;
+  padding-left: 1.7rem;
+  margin-top: .6em;
+  margin-bottom: .6em;
+  font-size: $font-size-text;
+  font-weight: $font-weight-light;
+  line-height: 1.8em;
+  p {line-height: 1.8em;}
+  letter-spacing: -0.1rem;
   font-style: italic;
 
   > :last-child {

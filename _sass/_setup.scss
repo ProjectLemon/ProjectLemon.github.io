@@ -13,6 +13,8 @@ $font-size-large:  2.0rem;
 $font-size-small:  1.2rem;
 $font-size-text:   1.5rem;
 $font-size-title:  2.3rem;
+$font-size-code:   1.3rem;
+$font-weight-light:   300;
 $font-weight-regular: 400;
 $font-weight-medium:  500;
 $line-height-base: 1.5;
@@ -20,15 +22,15 @@ $line-height-base: 1.5;
 
 $text-color:       #4A4A4A;
 $background-color: #F3F3F3;
-$brand-color:      #DB802A;
+$brand-color:      #E49337;
 
 
 // Width of the content area
-$content-width:    600px;
+$content-width:    60rem;
 
 // Breakpoints
-$desktop:          700px;
-$phone:            480px;
+$desktop:          42rem;
+$phone:            29rem;
 
 
 /**
@@ -40,12 +42,12 @@ $phone:            480px;
   }
 }
 @mixin media-desktop() {
-  @media (min-width: $desktop+1) {
+  @media (min-width: $desktop+.01) {
     @content;
   }
 }
 @mixin media-tablet() {
-  @media (min-width: $phone+1) and (max-width: $desktop) {
+  @media (min-width: $phone+.01) and (max-width: $desktop) {
     @content;
   }
 }
