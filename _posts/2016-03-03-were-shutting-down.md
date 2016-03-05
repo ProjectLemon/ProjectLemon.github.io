@@ -2,6 +2,9 @@
 layout: post
 title:  "We're shutting down"
 
+category: IntenseOrange
+tags: [android, games]
+
 author: Fredrik Johansson
 author-link: http://fredrik-johansson.com
 ---
