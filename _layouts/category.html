@@ -1,0 +1,18 @@
+---
+layout: page
+---
+
+<h1 class="title">Articles in {{ page.category }}</h1>
+
+{% if site.categories[page.category] %}
+  <ul>
+  {% for post in site.categories[page.category] %}
+    <li class="big-list-content">
+      <a class="subtitle" href="{{ post.url }}">{{ post.title }}</a>
+      <blockquote>{{ post.excerpt }}</blockquote>
+    </li>
+  {% endfor %}
+  </ul>
+{% else %}
+  <p>No posts</p>
+{% endif %}

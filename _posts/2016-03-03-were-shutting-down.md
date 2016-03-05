@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "We're shutting down"
-date:   2016-03-03
 
 author: Fredrik Johansson
 author-link: http://fredrik-johansson.com

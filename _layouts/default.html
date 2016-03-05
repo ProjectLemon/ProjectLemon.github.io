@@ -11,13 +11,14 @@ layout: compress
 
     {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        <!-- The replacing stuff is used for math (mathjax) with a custom delimiters $.. ..$ -->
-        {% assign start_delimiter = '<script type="math/asciimath">' %}
-        {% assign end_delimiter = '</script><noscript><em>Sorry, but math can&#39;t be shown without javascript turned on</em></noscript>' %}
-        {{ content | replace:'$..',start_delimiter| replace:'..$',end_delimiter }}
-      </div>
+    <div class="page">
+      <!-- The replacing stuff is used for math (mathjax) with a custom delimiters $.. ..$ -->
+      {% assign start_delimiter = '<script type="math/asciimath">' %}
+      {% assign end_delimiter = '</script>
+                                 <noscript><em>Sorry, but math can&#39;t be shown without
+                                   <a href="http://www.enable-javascript.com/" target="_blank">javascript turned on<a>
+                                 </em></noscript>' %}
+      {{ content | replace:'$..',start_delimiter| replace:'..$',end_delimiter }}
     </div>
 
     {% include footer.html %}

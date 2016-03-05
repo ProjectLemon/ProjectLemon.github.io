@@ -1,12 +1,18 @@
 ---
-layout: post
+layout: post # don't change
 
+### Mandatory:
 title:  "Another Post"
-date:   2016-03-03
-categories: category1, category2 # Optional
 
-author: Fredrik # Optional but highly recommended
-author-link: http://fredrik-johansson.com # Optional
+### Optional:
+date:   2016-03-03 16:00 # If you would like to specify time
+
+tags: [tag1, tag2]
+category: category1 # category must be one of following: Programming, IntenseOrange
+### Additional categories can be added in the folder _categories
+
+author: Fredrik Johansson # Optional but highly recommended
+author-link: http://fredrik-johansson.com 
 ---
 
 # Big Title
@@ -25,7 +31,7 @@ Link:
 Image:
 ![Image title](/assets/images/image-name.png)
 
-Writing code have a special (no markdown) syntax  
+Writing code have a special (not markdown) syntax  
 {% highlight python %}
 def block_of_code():
     pass

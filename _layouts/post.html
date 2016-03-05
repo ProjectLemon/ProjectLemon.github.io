@@ -19,4 +19,28 @@ layout: default
 
   <p class="post-text">{{ page.content }}</p>
 
+
+  <p class="footnote">
+  <!-- Find the url to the corresponding category -->
+  {% assign category_url = "#" %}
+  {% for collection in site.collections %}
+    {% if collection.label == 'categories' %}
+      {% for category in collection.docs %}
+        {% if category.category == page.category %}
+         {% assign category_url = category.url %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+    
+  {% if page.category and page.tags.size > 0 %}
+    
+    Posted in <a class="category" href="{{ category_url }}">{{ page.category }}</a>
+    with <span class="icon">{% include /vectors/tags-icon.svg %}</span>: {% for tag in page.tags %}<a class="tag" href="/blog/tags#{{ tag }}">{{ tag | capitalize}}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+  {% elsif page.tags.size > 0 %}
+    <span class="icon">{% include /vectors/tags-icon.svg %}</span>: {% for tag in page.tags %}<a class="tag" href="/blog/tags#{{ tag }}">{{ tag | capitalize }}</a>{% if forloop.last == false %}, {% endif %}{% endfor %}
+  {% elsif page.category %}
+    Posted in <a class="category" href="{{ category_url }}">{{ page.category }}</a>
+  {% endif %}
+  </p>
 </article>

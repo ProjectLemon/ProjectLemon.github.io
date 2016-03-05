@@ -1,0 +1,48 @@
+---
+layout: page
+title: Blog Tags
+permalink: /blog/tags
+---
+
+<h1 class="title">Articles by tags</h1>
+
+{% if site.tags.size > 0 %}
+  <!-- Linear search for max usage -->
+  {% assign tags_max = 0 %}
+  {% for tag in site.tags %}
+      {% if tag[1].size > tags_max %}
+          {% assign tags_max = tag[1].size %}
+      {% endif %}
+  {% endfor %}
+  
+  
+  <ul>
+  <!-- Make list in order or frequncy used -->
+  {% for i in (1..tags_max) reversed %}
+    {% for tag in site.tags %}
+      {% if tag[1].size == i %}
+      
+        {% assign t = tag | first %}
+        {% assign posts = tag | last %}
+        
+        <li class="big-list-content">
+          <h1 class="subtitle">{{ t | capitalize }}</h1>
+          <ul>
+          {% for post in posts %}
+            {% if post.tags contains t %}
+            <li id="{{ post.title }}" class="medium-list-content">
+              <a href="{{ post.url }}">{{ post.title }}</a>
+              <span class="date right">{{ post.date | date: "%B %-d, %Y"  }}</span>
+            </li>
+            {% endif %}
+          {% endfor %}
+          </ul>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+  </ul>
+  
+{% else %}
+  <p>No tags used</p>
+{% endif %}

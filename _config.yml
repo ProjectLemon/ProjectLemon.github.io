@@ -8,6 +8,16 @@ description: > # ignore newlines
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 
 
+collections:
+  categories:
+    output: true
+    permalink: /blog/categories/:path/
+
+defaults:
+  - scope:
+      type: categories
+    values:
+      layout: category
 
 # Build settings
 markdown: kramdown

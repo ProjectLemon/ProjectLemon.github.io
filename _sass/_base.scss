@@ -3,7 +3,7 @@
  */
 html, body, div, span, object, ifram, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, a, img, form, table, time, canvas, header,
-meny, nav, section, audio, video, dl, dd, ol, ul, figure {
+meny, nav, section, audio, video, dl, dd, ol, ul, figure, blockquote {
   border:0;
   font-size:100%;
   vertical-align:baseline;
@@ -17,7 +17,7 @@ hgroup, menu, nav, section{
 body {
   line-height:1
 }
-table{
+table {
   border-collapse:collapse;
   border-spacing:0
 }
@@ -51,6 +51,37 @@ p {
 .title {
   font-size: $font-size-title;
   font-weight: $font-weight-medium;
+  color: $text-color;
+  margin-bottom: 1em;
+}
+.subtitle {
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
+  display: block;
+  margin-bottom: 1em;
+}
+.footnote {
+  font-size: $font-size-small;
+  font-style: italic;
+  color: rgba(0, 0, 0, .6);
+}
+.date {
+  font-size: $font-size-small; 
+}
+.category {
+  background: $brand-color;
+  color: white !important;
+  padding: .2em .6em .3em;
+  border-radius: .3em;
+  font-size: 80%;
+  
+  transition: background .3s;
+  -webkit-transition: background .3s;
+  
+  &:hover {
+    text-decoration: none;
+    background: lighten($brand-color, 10%);
+  }
 }
 
 
@@ -131,6 +162,20 @@ pre {
   margin-left: auto;
   text-align: center; 
 }
+.big-list-content {
+  padding-top: 1em;
+  padding-bottom: 3em;
+}
+.medium-list-content {
+  padding-top: .8em;
+  padding-bottom: .8em;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 
 /**
  * Buttons
@@ -153,6 +198,9 @@ pre {
     background-color: #728994;
     border-color: #728994;
   }
+}
+.button-container {
+  margin: .6em 4em;
 }
 
 a.std-button {
@@ -184,4 +232,21 @@ a.std-button {
 }
 .icon-white > svg path {
   fill: white;
+}
+
+
+/**
+ * Blockquotes
+ */
+blockquote {
+  color: $text-color;
+  border-left: 4px solid $text-color;
+  padding-left: 4px;
+  font-size: 18px;
+  letter-spacing: -1px;
+  font-style: italic;
+
+  > :last-child {
+      margin-bottom: 0;
+  }
 }

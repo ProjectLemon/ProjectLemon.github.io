@@ -1,0 +1,18 @@
+---
+layout: page
+title: Blog Categories
+permalink: /blog/categories/
+---
+
+<h1 class="title">Categories for articles</h1>
+<br>
+
+{% for collection in site.collections %}
+  {% if collection.label == 'categories' %}
+    {% for category in collection.docs %}
+     <a class="subtitle" href="{{ category.url }}">{{ category.category }}</a>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+  
+  
