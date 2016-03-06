@@ -8,7 +8,7 @@ title:  "New beginnings"
 date:   2016-03-03 16:00 # If you would like to specify time
 
 tags: [new, project, go, golang, angular, application, web]
-category: malicious-mango# category must be one of following: Programming, IntenseOrange
+category: malicious-mango # category must be one of following: Programming, IntenseOrange
 ### Additional categories can be added in the folder _categories
 
 author: Linus Lagerhjelm # Optional but highly recommended
