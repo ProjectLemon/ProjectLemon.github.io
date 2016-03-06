@@ -1,4 +1,4 @@
 ---
 title: Malicious Mango
-category: malicious-mango
+category: MaliciousMango
 ---

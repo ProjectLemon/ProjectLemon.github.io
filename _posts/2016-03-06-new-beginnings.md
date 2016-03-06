@@ -1,17 +1,13 @@
 ---
-layout: post # don't change
+layout: post
 
-### Mandatory:
 title:  "New beginnings"
-
-### Optional:
-date:   2016-03-03 16:00 # If you would like to specify time
+date:   2016-03-03 16:00
 
 tags: [new, project, go, golang, angular, application, web]
-category: malicious-mango # category must be one of following: Programming, IntenseOrange
-### Additional categories can be added in the folder _categories
+category: MaliciousMango
 
-author: Linus Lagerhjelm # Optional but highly recommended
+author: Linus Lagerhjelm
 ---
 
 Today we began our new project by spending the afternoon working on the
@@ -28,5 +24,5 @@ made.
 
 ![design sketch](/assets/images/malicious-mango-sketch.jpg)
 
-We were planing to write the server side of the application and the client side
+We were planing to write the server side of the application in Golang and the client side
 in Angularjs
