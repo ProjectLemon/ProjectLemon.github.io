@@ -2,7 +2,6 @@
 layout: post
 
 title:  "New beginnings"
-date:   2016-03-03 16:00
 
 tags: [new, project, go, golang, angular, application, web]
 category: MaliciousMango
