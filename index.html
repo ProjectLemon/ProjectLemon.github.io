@@ -69,3 +69,20 @@ redirect_from:
     </li>
   {% endfor %}
 </ul>
+
+<!-- Repeat top navigation -->
+{% if site.posts.size > 1 %}
+  <div class="blog-navigation">
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="more-posts">← More posts</a>
+    {% else %}
+      <span class="unactive-link more-posts">← More posts</span>
+    {% endif %}
+  
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous-page">Previous page →</a>
+    {% else %}
+      <span class="unactive-link previous-page">Previous page →</span>
+    {% endif %}
+  </div>
+{% endif %}

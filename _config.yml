@@ -18,6 +18,10 @@ defaults:
       type: categories
     values:
       layout: category
+  - scope:
+      type: posts
+    values:
+      permalink: 	/blog/:year/:month/:day/:title/
 
 # Build settings
 markdown: kramdown
