@@ -11,7 +11,7 @@ tags: [new, project, go, golang, angular, application, web]
 category: malicious-mango# category must be one of following: Programming, IntenseOrange
 ### Additional categories can be added in the folder _categories
 
-author: Linus Lagerhjelm# Optional but highly recommended
+author: Linus Lagerhjelm # Optional but highly recommended
 ---
 
 Today we began our new project by spending the afternoon working on the
