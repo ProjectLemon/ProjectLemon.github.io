@@ -4,7 +4,7 @@ layout: post
 title:  "Hackaton at Acino"
 
 tags: [new, project, html, css, hackaton, web]
-category: WickedPapaya
+category: Hackaton
 
 author: Jenny Kinert
 ---
@@ -16,4 +16,4 @@ possible to use it for online shopping and try the clothes on virtually in the m
 To simulate how the wardrobe will work we will make a webbsite and a presentation. We will present it in a few a hours and hopefully the
 jury and all the other participators like our idea. 
 
-![design ](/assets/images/interactiveWardrobe.png)
+![Website concept](/assets/images/interactiveWardrobe.png)
