@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why Mattias is wrong
-category: Generall
+category: General
 tags: [pizza]
 author: Fredrik Johansson
 author-link: http://fredrik-johansson.com
