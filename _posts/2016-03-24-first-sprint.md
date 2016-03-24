@@ -13,3 +13,5 @@ So we have actually built a complete and rather safe sign in system. We used the
 We also begun on our next sprint, when done, can create profiles. It will be static though and no changes can be made. But still another step forward. Hopefully we can be done with that about a week from now. 
 Happy Easter 
 // Project Lemon
+
+![Login Desktop Prototype 1](/assets/images/login-desktop-prototype-1.png)
