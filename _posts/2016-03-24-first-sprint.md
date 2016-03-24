@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "First Sprint"
-dat
+title: "First Sprint"
+
+date: 2016-03-24 15:53
 
 category: MaliciousMango
 tags: [golang, angularjs]
